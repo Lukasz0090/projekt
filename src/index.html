@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta http-equiv="X-UA-Compatible" content="IE=9">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>Tools</title>
+  <!-- <link href="../content/css/main.css" rel='stylesheet' type='text/css'> -->
+  <!--[if lt IE 9]>
+        <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+        <![endif]-->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <style></style>
+</head>
+
+<body>
+  <header>
+    <section class="content-wrapp">
+      <div class="logo">
+        <a href="#"><img id="default-logo" alt="RTB House" src="https://panel.rtbhouse.com/images/logo/200x23.png"></a>
+      </div>
+    </section>
+  </header>
+  <aside>
+    <section class="forms-content">
+      <div class="forms-input-content">
+        <p>Enter package and videos</p>
+        <form>
+          <label>Choose a package</label>
+          <!-- <input id="getFormats" type="text" name="size" placeholder="e.g 300x230, 330x130" required=""> -->
+          <select id="getFormats"></select>
+          <input type="file" id="move" accept="video/*" required="">
+          <input type="submit" value="Generate View" class="button-content">
+          <p id="error">&nbsp;</p>
+        </form>
+      </div>
+
+      <section class="global-button-content">
+        <p>Global settings all banners</p>
+        <form id="radio-button">
+          <label class="container">
+            <input id="contain" type="radio" name="radio" class="custom-control-input" disabled>
+            <span class="custom-control-label">Contain</span>
+          </label>
+          <label class="container">
+            <input id="cover" type="radio" name="radio" class="custom-control-input" disabled>
+            <span class="custom-control-label">Cover</span>
+          </label>
+        </form>
+      </section>
+      <section class="custom-setting-content">
+        <!-- <p>Custom settings banner</p> -->
+        <!-- <form class="custom-setting-form">
+          <label>Vertical</label>
+          <input id="vertical-set" type="number" value="" size="40" placeholder="0" disabled>
+          <label>Horizontal</label>
+          <input id="horizontal-set" type="number" value="" size="40" placeholder="0" disabled>
+        </form> -->
+        <!-- <form id="custom-setting-background">
+          <label class="container">
+            <input id="contain-this-banner" type="radio" name="radio" class="custom-control-input background-this-banner"
+              disabled>
+            <span class="custom-control-label">Contain</span>
+          </label>
+          <label class="container">
+            <input id="cover-this-banner" type="radio" name="radio" class="custom-control-input background-this-banner"
+              disabled>
+            <span class="custom-control-label">Cover</span>
+          </label>
+        </form> -->
+        <input id="clearSet" type="button" value="Clear setting" class="button-content" disabled>
+        <hr />
+        <input id="generateData" type="button" value="Generate Data" class="button-content" disabled>
+      </section>
+    </section>
+  </aside>
+  <main>
+    <section class="fill-content">
+    </section>
+    <section class="loader"></section>
+  </main>
+  <section id="popup" class="overlay">
+    <section class="popup-content">
+      <span id="close">&times;</span>
+      <textarea id="json"></textarea>
+      <input id="copyJsonBtn" type="submit" value="Copy" class="button-content">
+    </section>
+  </section>
+  <section class="alert error-alert">
+    <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span>
+    <p></p>
+  </section>
+  <!-- <script src="../scripts.js"></script> -->
+</body>
+
+</html>
